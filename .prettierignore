@@ -1,0 +1,23 @@
+# Ignore artifacts:
+node_modules
+dist
+coverage
+.turbo
+.DS_Store
+*.local
+
+# Ignore lock files:
+pnpm-lock.yaml
+package-lock.json
+yarn.lock
+
+# Ignore logs:
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Ignore specific config files if necessary
+# e.g., .env
+# ANTLR Generated Code
+packages/javascript/src/generated

@@ -1,0 +1,38 @@
+{
+  "name": "@sylphlab/ast-javascript",
+  "version": "0.0.0",
+  "description": "JavaScript parser for SylphLab AST (using custom engine)",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "antlr": "antlr4ts -visitor -listener -o src/generated grammar/*.g4",
+    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "dev": "tsup src/index.ts --format cjs,esm --dts --watch",
+    "lint": "eslint . --cache --max-warnings=0",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "clean": "rimraf dist .turbo"
+  },
+  "dependencies": {
+    "@sylphlab/ast-core": "workspace:*",
+    "antlr4ts": "^0.5.0-alpha.4"
+  },
+  "devDependencies": {
+    "@sylphlab/eslint-config-sylph": "^3.4.0",
+    "eslint": "^9.25.0",
+    "tsup": "^8.4.0",
+    "typescript": "^5.8.3"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "license": "MIT"
+}

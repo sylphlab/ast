@@ -1,0 +1,37 @@
+{
+  "compilerOptions": {
+    /* Base Options: */
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "target": "ESNext",
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "moduleDetection": "force",
+    "isolatedModules": true,
+    "rootDir": "src", // Added for better declaration emit resolution
+    /* Strictness */
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitAny": true,
+    /* If NOT transpiling with TypeScript: */
+    "module": "preserve", // Keep imports/exports as-is for tsup
+    // "preserveConstEnums": true, // Optional, if needed
+    /* If your code runs in the DOM: */
+    // "lib": ["esnext", "dom", "dom.iterable"],
+    /* If your code doesn't run in the DOM: */
+    "lib": ["esnext"],
+
+    /* SylphLab tsup Specifics: */
+    // "composite": false, // DO NOT USE composite: true
+    // "references": [], // DO NOT USE references
+
+    /* Output for tsup (though noEmit is true, these help tooling): */
+    "declaration": true, // Generate .d.ts files (tsup uses this)
+    "declarationMap": true, // Generate sourcemaps for .d.ts files
+    "sourceMap": true, // Generate .map files for JS
+    "outDir": "./dist", // Specify output directory
+    "baseUrl": "." // Needed for paths mapping
+  },
+  "include": ["src/**/*", "src/generated"], // Include src and generated code
+  "exclude": ["node_modules", "dist"] // Exclude build outputs and dependencies
+}

@@ -1,0 +1,6 @@
+# pnpm-workspace.yaml
+packages:
+  # all packages in subdirs of packages/
+  - "packages/*"
+  # exclude packages/some-package if needed later
+  # - '!packages/some-package'
