@@ -14,7 +14,7 @@
 ## Linting & Formatting
 
 - **Linter:** ESLint
-  - **Configuration:** `eslint-config-love` (Used as a deviation from `@sylphlab/eslint-config-sylph-strict` due to publication errors in the `@sylphlab` packages). Configured via root `eslint.config.js`.
+  - **Configuration:** `eslint-config-sylph` (Corrected based on user feedback). Configured via root `eslint.config.js`. (Note: Pre-commit hook still fails, indicating potential issue with this config or its usage in flat config).
 - **Formatter:** Prettier
   - **Configuration:** Default Prettier settings (Used as a deviation from `@sylphlab/prettier-config` due to publication errors). Configured via root `.prettierrc.cjs`. Ignored files defined in `.prettierignore`.
 

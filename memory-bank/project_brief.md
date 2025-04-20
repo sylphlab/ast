@@ -16,7 +16,7 @@ Mandate: Design for future extensibility to support all languages.
 - Parser Generator: **ANTLR v4** (`antlr4ts`, `antlr4ts-cli`)
 - Testing: Vitest
 - Build Tool: `tsup`
-- Linting/Formatting: ESLint (`eslint-config-love`), Prettier (defaults)
+- Linting/Formatting: ESLint (`eslint-config-sylph`), Prettier (defaults)
 - Versioning/Publishing: Changesets
 - Git Hooks: Husky, lint-staged, commitlint
 

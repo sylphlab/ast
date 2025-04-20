@@ -111,8 +111,20 @@ export interface AstLiteral extends Expression {
 }
 
 // TODO: Define many more node types:
-// - Statements: IfStatement, ForStatement, WhileStatement, BlockStatement, ReturnStatement...
+// - Statements: ForStatement, WhileStatement, ReturnStatement...
 // - Expressions: BinaryExpression, UnaryExpression, CallExpression, MemberExpression, AssignmentExpression...
 // - Declarations: FunctionDeclaration, ClassDeclaration...
 // - Patterns: ObjectPattern, ArrayPattern...
 // - Specific Literals: StringLiteral, NumericLiteral etc. if needed separate from Tokens
+
+export interface BlockStatement extends Statement {
+    type: 'BlockStatement';
+    body: Statement[];
+}
+
+export interface IfStatement extends Statement {
+    type: 'IfStatement';
+    test: Expression;
+    consequent: Statement;
+    alternate: Statement | null;
+}
